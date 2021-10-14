@@ -1,0 +1,14 @@
+#versão do linux
+os: linux
+dist: focal
+
+#linguagem utilizada para desenvolver a app
+language: python
+
+#versao q a app suporte
+python:
+  - "3.8"
+
+#instalacao de modulos necessarios para a app
+install:
+  - pip install flask pytest
