@@ -15,3 +15,11 @@ install:
 
 script:
   - pytest -v test.py
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  edge: true
+  app: devsecops-sre
+  on:
+      branch: main
