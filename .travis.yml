@@ -12,3 +12,6 @@ python:
 #instalacao de modulos necessarios para a app
 install:
   - pip install flask pytest
+
+script:
+  - pytest -v test.py
