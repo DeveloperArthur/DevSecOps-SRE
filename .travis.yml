@@ -9,12 +9,18 @@ language: python
 python:
   - "3.8"
 
+addons:
+  sonarcloud:
+    organization: developerarthur
+    token: $(SONAR_TOKEN)
+
 #instalacao de modulos necessarios para a app
 install:
   - pip install flask pytest
 
 script:
-  - pytest -v test.py
+  - pytest -v test.py || travis_terminate 1;
+  - sonar-scanner || travis_terminate 1;
 
 deploy:
   provider: heroku
