@@ -12,7 +12,7 @@ python:
 addons:
   sonarcloud:
     organization: developerarthur
-    token: $(SONAR_TOKEN)
+    token: ${SONAR_TOKEN}
 
 #instalacao de modulos necessarios para a app
 install:
